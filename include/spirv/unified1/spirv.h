@@ -1200,6 +1200,7 @@ typedef enum SpvCapability_ {
     SpvCapabilityTileShadingQCOM = 4495,
     SpvCapabilityCooperativeMatrixConversionQCOM = 4496,
     SpvCapabilityTextureBlockMatch2QCOM = 4498,
+    SpvCapabilityBFloat16MulAddQCOM = 4504,
     SpvCapabilityMultipleWaitQueuesQCOM = 4539,
     SpvCapabilityImageGatherLinearQCOM = 4543,
     SpvCapabilityImageGatherExtendedModesQCOM = 4544,
@@ -2180,6 +2181,7 @@ typedef enum SpvOp_ {
     SpvOpImageBlockMatchWindowSADQCOM = 4501,
     SpvOpImageBlockMatchGatherSSDQCOM = 4502,
     SpvOpImageBlockMatchGatherSADQCOM = 4503,
+    SpvOpBFloat16MulAddQCOM = 4505,
     SpvOpCompositeConstructCoopMatQCOM = 4540,
     SpvOpCompositeExtractCoopMatQCOM = 4541,
     SpvOpExtractSubArrayQCOM = 4542,
@@ -3115,6 +3117,7 @@ inline void SpvHasResultAndType(SpvOp opcode, bool *hasResult, bool *hasResultTy
     case SpvOpImageBlockMatchWindowSADQCOM: *hasResult = true; *hasResultType = true; break;
     case SpvOpImageBlockMatchGatherSSDQCOM: *hasResult = true; *hasResultType = true; break;
     case SpvOpImageBlockMatchGatherSADQCOM: *hasResult = true; *hasResultType = true; break;
+    case SpvOpBFloat16MulAddQCOM: *hasResult = true; *hasResultType = true; break;
     case SpvOpCompositeConstructCoopMatQCOM: *hasResult = true; *hasResultType = true; break;
     case SpvOpCompositeExtractCoopMatQCOM: *hasResult = true; *hasResultType = true; break;
     case SpvOpExtractSubArrayQCOM: *hasResult = true; *hasResultType = true; break;
@@ -4417,6 +4420,7 @@ inline const char* SpvCapabilityToString(SpvCapability value) {
     case SpvCapabilityTileShadingQCOM: return "TileShadingQCOM";
     case SpvCapabilityCooperativeMatrixConversionQCOM: return "CooperativeMatrixConversionQCOM";
     case SpvCapabilityTextureBlockMatch2QCOM: return "TextureBlockMatch2QCOM";
+    case SpvCapabilityBFloat16MulAddQCOM: return "BFloat16MulAddQCOM";
     case SpvCapabilityMultipleWaitQueuesQCOM: return "MultipleWaitQueuesQCOM";
     case SpvCapabilityImageGatherLinearQCOM: return "ImageGatherLinearQCOM";
     case SpvCapabilityImageGatherExtendedModesQCOM: return "ImageGatherExtendedModesQCOM";
@@ -5218,6 +5222,7 @@ inline const char* SpvOpToString(SpvOp value) {
     case SpvOpImageBlockMatchWindowSADQCOM: return "OpImageBlockMatchWindowSADQCOM";
     case SpvOpImageBlockMatchGatherSSDQCOM: return "OpImageBlockMatchGatherSSDQCOM";
     case SpvOpImageBlockMatchGatherSADQCOM: return "OpImageBlockMatchGatherSADQCOM";
+    case SpvOpBFloat16MulAddQCOM: return "OpBFloat16MulAddQCOM";
     case SpvOpCompositeConstructCoopMatQCOM: return "OpCompositeConstructCoopMatQCOM";
     case SpvOpCompositeExtractCoopMatQCOM: return "OpCompositeExtractCoopMatQCOM";
     case SpvOpExtractSubArrayQCOM: return "OpExtractSubArrayQCOM";
